@@ -17,10 +17,81 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+
+  ::-webkit-scrollbar {
+  display: none;
 }
+}
+
+
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.oleo-script-regular {
+  font-family: "Oleo Script", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oleo-script-bold {
+  font-family: "Oleo Script", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+.league-font {
+  font-family: "League Gothic", sans-serif;
+  font-weight: 900;
+}
+.play-regular {
+  font-family: "Play", sans-serif;
+  font-weight:200;
+  font-style: normal;
+}
+.syncopate-regular {
+  font-family: "Syncopate", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+@layer utilities {
+  .mask {
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll-reverse 50s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: scroll 50s linear infinite;
 }
