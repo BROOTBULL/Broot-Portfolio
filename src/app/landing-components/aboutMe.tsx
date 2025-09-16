@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <div className="h-fit w-full relative pb-20 mb-40">
+    <div className="h-fit w-full relative pb-20 lg:mb-40">
       <div className="flex flex-col text-xs h-full w-full px-2 ">
         <div className="flex flex-col">
-          <div className="text-[80px] syncopate-regular text-gray-300 border-b-2 w-[50%] border-red-800 my-2">
+          <div className="text-[30px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-[90%] lg:w-[50%] border-red-800 my-2">
             {"ABOUT ME"}
           </div>
-          <div className="h-fit w-full p-2">
-            <div className="h-200 w-230 absolute -z-1 flex flex-row gap-2 p-2 ">
+          <div className="h-fit w-full lg:p-2">
+            <div className="h-200 w-230 absolute lg:flex hidden -z-1 flex-row gap-2 p-2 ">
               <div className="flex-col items-center justify-center flex flex-4 blur-[2px] hover:blur-none">
                 <div className="w-full h-120 justify-center flex-col flex gap-2">
                   <Image
@@ -83,8 +83,8 @@ export default function AboutMe() {
                 </div>
               </div>
             </div>
-            <div className="p-8 text-sm play-regular text-gray-400 w-full flex flex-col gap-5 z-10">
-              <div className="max-w-[700px] w-[50%] h-fit ml-auto">
+            <div className="lg:p-8 text-[10px] lg:text-sm play-regular text-gray-400 w-full flex flex-col gap-5 z-10 ">
+              <div className="max-w-[700px] w-full lg:w-[50%] h-fit ml-auto">
                 {"Hi, I’m Arjit — a "}
                 <span className="font-bold text-red-300/60">developer</span>
                 {
@@ -106,7 +106,7 @@ export default function AboutMe() {
                 {"."}
               </div>
 
-              <div className="max-w-[700px]  w-[50%] h-fit ml-auto">
+              <div className="max-w-[700px] w-full lg:w-[50%] h-fit ml-auto">
                 {"I like working across the stack — from "}
                 <span className="font-bold text-red-300/60">
                   React/Next.js frontends
@@ -130,11 +130,19 @@ export default function AboutMe() {
                 {"."}
               </div>
 
-              <div className="max-w-[500px]  w-[50%] h-fit ml-auto mt-15 ">
-                <div className="text-[40px] syncopate-regular text-gray-300 border-b-2 w-[80%] ml-auto text-right border-red-800 my-2">
+              <Image
+                className="scale-100 lg:hidden flex"
+                height={1000}
+                width={800}
+                alt=""
+                src={"/media/gallery/about.png"}
+              />
+
+              <div className="max-w-[500px] w-full lg:w-[50%] h-fit ml-auto lg:mt-15 ">
+                <div className="text-[20px] lg:text-[40px] syncopate-regular text-gray-300 border-b-2 w-[70%] lg:w-[80%] ml-auto text-right border-red-800 my-2">
                   {"MY HOBBIES"}
                 </div>
-                <div className="max-w-[700px] w-[80%] h-fit ml-auto mt-5">
+                <div className="max-w-[700px] w-[60%] h-fit ml-auto mt-5">
                   {"Beyond coding, I spend time on my creative side — "}
                   <div className="font-bold text-red-300/60">- Gaming</div>
                   <div className="font-bold text-red-300/60">- Sketching</div>
@@ -147,7 +155,7 @@ export default function AboutMe() {
                   <span className="font-bold text-red-300/60">smooth</span>
                   {" and "}
                   <span className="font-bold text-red-300/60">intuitive.</span>
-                  <div/>
+                  <div />
                   {" Right now, I’m looking for opportunities where I can "}
                   <span className="font-bold text-red-300/60">learn</span>
                   {", "}

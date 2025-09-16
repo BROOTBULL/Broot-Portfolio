@@ -66,7 +66,7 @@ export default function PortFolioProject() {
               <button className="ml-auto text-xs p-2 rounded-sm border-b-1 text-gray-300 border-gray-400 ">
                 View Code
               </button>
-              <button className="text-xs p-2 rounded-sm bg-red-800/20 border-1 text-gray-300 border-red-900 ">
+              <button className="text-xs p-2 rounded-sm bg-red-800/20  border-red-900 ">
                 View Project
               </button>
             </div>
