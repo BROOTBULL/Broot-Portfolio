@@ -56,7 +56,7 @@ export default function ContactMe() {
             onSubmit={(e) => {
               e.preventDefault();
             }}
-            className="max-w-[700px] w-full h-80 lg:mt-10 rounded-md flex flex-col p-5"
+            className="max-w-[700px] w-full h-fit lg:mt-10 rounded-md flex flex-col p-5 mb-10"
           >
             <div className="ml-auto p-2 m-2h-10 lg:h-12 w-full justify-between flex flex-col lg:flex-row lg:items-center">
               <div className="text-gray-200 font-bold text-[11px] lg:text-sm">
@@ -84,7 +84,7 @@ export default function ContactMe() {
                 value={email}
               />
             </div>
-            <div className="ml-auto p-2 m-2 h-10 lg:h-12 w-full justify-between flex flex-col lg:flex-row ">
+            <div className="ml-auto p-2 m-2 h-fit w-full justify-between flex flex-col lg:flex-row ">
               <div className="text-gray-200 font-bold text-[11px] lg:text-sm">
                 {"Message :"}
               </div>
@@ -98,7 +98,7 @@ export default function ContactMe() {
                 value={message}
               />
             </div>
-            <div className="flex flex-col items-center mt-5 lg:mt-15 mr-2 w-fit ml-auto">
+            <div className="flex flex-col items-center mt-5 lg:mt-10 mr-2 w-fit ml-auto">
               <button className="border-1 text-[11px] lg:base bg-red-950/40 border-red-800/70 rounded-md h-9 lg:h-11 w-fit px-3 md:px-5">
                 {"Send Message"}
               </button>
