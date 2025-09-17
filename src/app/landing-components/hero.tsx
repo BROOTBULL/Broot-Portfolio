@@ -12,7 +12,7 @@ export default function Hero() {
             Hello !
           </div>
           <Image
-            height={1900}
+            height={600}
             width={1000}
             src={"/media/hero.png"}
             alt="profile image"
