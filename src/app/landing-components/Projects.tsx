@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const ProjectData = [
   {
@@ -13,6 +15,7 @@ const ProjectData = [
     buttonColor:
       "bg-[rgb(10_10_12_/.5)] drop-shadow-[0_0_15px_rgb(190_190_250_/0.1)] border-white/30",
     border: "border-gray-400",
+    link: "https://broot-chess-frontend-fj9b.onrender.com/",
   },
   {
     projectName: "Broot-Todo",
@@ -26,6 +29,7 @@ const ProjectData = [
     buttonColor:
       "bg-slate-950 drop-shadow-[0_0_15px_rgb(20_20_250_/0.2)] border-indigo-950",
     border: "border-indigo-800/80",
+    link: "https://broot-todo.vercel.app/",
   },
   {
     projectName: "Broot-Portfolio",
@@ -39,10 +43,13 @@ const ProjectData = [
     buttonColor:
       "bg-[rgb(28_8_8)] drop-shadow-[0_0_15px_rgb(250_20_20_/0.2)]  border-red-900/80 ",
     border: "border-red-800/80",
+    link: "https://broot-portfolio.vercel.app/",
   },
 ];
 
 export default function Projects() {
+  const router = useRouter();
+
   return (
     <>
       {ProjectData.map((project, i) => (
@@ -87,11 +94,11 @@ export default function Projects() {
               />
             </div>
             <div
-              className={`w-[80%] ${project.blurColor} blur-3xl rounded-[100%] absolute h-full`}
+              className={`w-[80%] ${project.blurColor} blur-3xl -z-1 rounded-[100%] absolute h-full`}
             ></div>
 
             <div className="w-full h-fit">
-              <div>
+              <div className="">
                 <div
                   className={`flex flex-row justify-between items-center border-b-1 ${project.labelColor} rounded-md p-1.5 px-2 ${project.border} h-8 lg:h-fit mb-2 w-full`}
                 >
@@ -100,8 +107,13 @@ export default function Projects() {
                       ? project.title.slice(0, 40) + "..."
                       : project.title}
                   </div>
-                  <div className="flex flex-row items-center text-nowrap text-gray-300">
-                    Learn more
+                  <button
+                    onClick={() =>
+                      router.push("/project/" + project.projectName)
+                    }
+                    className="flex flex-row items-center select-none text-gray-300 hover:text-white duration-200 cursor-pointer hover:bg-gray-500/10 p-1 w-26 justify-end rounded-md"
+                  >
+                    <div>Learn more</div>
                     <Image
                       height={30}
                       width={30}
@@ -109,26 +121,40 @@ export default function Projects() {
                       src={"/media/redirect.png"}
                       alt="chess Landing Page"
                     />
-                  </div>
+                  </button>
                 </div>
                 <div className="flex lg:flex-row flex-col lg:items-center gap-2 w-full px-1">
                   <div className="play-regular mt-1 text-[11px] lg:text-sm gray-300 text-gray-400">
                     {project.brief}
                   </div>
                   <div className="w-full h-fit flex flex-row gap-2">
-                    <div className="ml-auto flex flex-col items-center ">
-                      <button className="text-[10px] lg:text-xs p-2 text-gray-300 bg-black rounded-md border-1 border-white/10">
+                    <div className="ml-auto flex flex-col group items-center ">
+                      <button
+                        onClick={() =>
+                          window.open(
+                            `https://github.com/BROOTBULL/${project.projectName}`,
+                            "_blank"
+                          )
+                        }
+                        className="text-[10px] group lg:text-xs p-2 group text-gray-300 group-hover:text-white duration-200 hover:bg-black/30 bg-black rounded-md border-1 cursor-pointer border-white/10"
+                      >
                         View Code
                       </button>
-                      <div className="h-[1px] w-[90%] bg-linear-to-r from-transparent via-white/50 to-transparent"></div>
+                      <div className="h-[1px] w-[90%] bg-linear-to-r from-transparent via-white/50 transition duration-200 group-hover:via-white to-transparent"></div>
                     </div>
-                    <div className="flex flex-col items-center ">
+                    <div className="flex flex-col items-center group">
                       <button
-                        className={`text-[10px] lg:text-xs p-2 rounded-sm ${project.buttonColor} border-1 text-gray-300 `}
+                        onClick={() =>
+                          window.open(
+                            `${project.link}`,
+                            "_blank"
+                          )
+                        }
+                        className={`text-[10px] lg:text-xs p-2 rounded-sm ${project.buttonColor} cursor-pointer border-1 text-gray-300 group-hover:text-white duration-200 `}
                       >
                         View Project
                       </button>
-                      <div className="h-[1px] w-[90%] bg-linear-to-r from-transparent via-white/70 to-transparent"></div>
+                      <div className="h-[1px] w-[90%] bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:via-white transition duration-200"></div>
                     </div>
                   </div>
                 </div>

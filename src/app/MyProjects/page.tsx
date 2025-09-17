@@ -1,4 +1,4 @@
-import Projects from "./Projects";
+import Projects from "@/app/landing-components/Projects";
 
 
 export default function MyProjects() {
@@ -11,10 +11,6 @@ export default function MyProjects() {
           </div>
         </div>
         <Projects />
-      </div>
-
-      <div className="w-full h-8 flex justify-center ">
-        See All Projects
       </div>
     </div>
   );
