@@ -10,14 +10,14 @@ export default function ContactMe() {
 
   return (
     <div className="h-fit w-full relative pb-20">
-      <div className="flex flex-col text-xs h-full w-full px-2 ">
+      <div className="flex flex-col text-xs h-full w-full px-5 ">
         <div className="flex flex-col lg:mb-10">
-          <div className="text-[30px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-[90%] lg:w-[50%] border-red-800 my-2">
+          <div className="text-[40px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-full lg:w-[50%] border-red-800 my-2">
             {"CONTACT ME"}
           </div>
         </div>
         <div className="lg:p-8 play-regular w-full justify-center items-center flex flex-col gap-5 z-10 text-shadow-md">
-          <div className="max-w-[700px] text-gray-400 text-[10px] lg:text-sm w-full h-fit lg:text-center">
+          <div className="max-w-[700px] text-gray-400 text-[12px] lg:text-sm w-full h-fit lg:text-center">
             {"I’m actively looking for opportunities where I can "}
             <span className="font-bold text-red-300/60 text-shadow-none">
               learn
@@ -56,10 +56,10 @@ export default function ContactMe() {
             onSubmit={(e) => {
               e.preventDefault();
             }}
-            className="max-w-[700px] w-full h-fit lg:mt-10 rounded-md flex flex-col p-5 mb-10"
+            className="max-w-[700px] w-full h-fit lg:mt-10 rounded-md flex flex-col p-3 mb-10"
           >
             <div className="ml-auto p-2 m-2h-10 lg:h-12 w-full justify-between flex flex-col lg:flex-row lg:items-center">
-              <div className="text-gray-200 font-bold text-[11px] lg:text-sm">
+              <div className="text-gray-200 font-bold text-[11px] lg:text-sm my-2">
                 {"Name :"}
               </div>
               <input
@@ -72,7 +72,7 @@ export default function ContactMe() {
               />
             </div>
             <div className="ml-auto p-2 m-2h-10 lg:h-12 w-full justify-between flex flex-col lg:flex-row lg:items-center">
-              <div className="text-gray-200 font-bold text-[11px] lg:text-sm">
+              <div className="text-gray-200 font-bold text-[11px] lg:text-sm my-2">
                 {"Email :"}
               </div>
               <input
@@ -85,7 +85,7 @@ export default function ContactMe() {
               />
             </div>
             <div className="ml-auto p-2 m-2 h-fit w-full justify-between flex flex-col lg:flex-row ">
-              <div className="text-gray-200 font-bold text-[11px] lg:text-sm">
+              <div className="text-gray-200 font-bold text-[11px] lg:text-sm my-2">
                 {"Message :"}
               </div>
               <TextareaAutosize

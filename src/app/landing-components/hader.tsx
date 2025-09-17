@@ -7,7 +7,7 @@ export default function Header() {
         <div className="w-full h-fit z-100 flex flex-col justify-between items-center">
           <div className="drop-shadow-[0_0_18px_rgb(220_220_250_/0.3)] h-fit w-full self-center">
             <div
-              className="md:h-16 md:w-12 h-10 w-6 bg-gradient-to-b from-white to-gray-400/90 mask"
+              className="md:h-16 md:w-12 h-11 w-9 bg-gradient-to-b from-white to-gray-400/90 mask"
               style={{
                 WebkitMaskImage: "url('/media/BrootW.png')",
                 maskImage: "url('/media/BrootW.png')",

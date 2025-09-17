@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function AboutMe() {
   return (
     <div className="h-fit w-full relative pb-20 lg:mb-40">
-      <div className="flex flex-col text-xs h-full w-full px-2 ">
+      <div className="flex flex-col text-xs h-full w-full px-5">
         <div className="flex flex-col">
-          <div className="text-[30px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-[90%] lg:w-[50%] border-red-800 my-2">
+          <div className="text-[40px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-full lg:w-[50%] border-red-800 my-2">
             {"ABOUT ME"}
           </div>
           <div className="h-fit w-full lg:p-2">
@@ -83,8 +83,8 @@ export default function AboutMe() {
                 </div>
               </div>
             </div>
-            <div className="lg:p-8 text-[10px] lg:text-sm play-regular text-gray-400 w-full flex flex-col gap-5 z-10 ">
-              <div className="max-w-[700px] w-full lg:w-[50%] h-fit ml-auto">
+            <div className="lg:p-8 text-[12px] lg:text-sm play-regular text-gray-400 w-full flex flex-col gap-5 z-10 ">
+              <div className="max-w-[730px] w-full lg:w-[50%] h-fit ml-auto">
                 {"Hi, I’m Arjit — a "}
                 <span className="font-bold text-red-300/60">developer</span>
                 {
@@ -106,7 +106,7 @@ export default function AboutMe() {
                 {"."}
               </div>
 
-              <div className="max-w-[700px] w-full lg:w-[50%] h-fit ml-auto">
+              <div className="max-w-[730px] w-full lg:w-[50%] h-fit ml-auto">
                 {"I like working across the stack — from "}
                 <span className="font-bold text-red-300/60">
                   React/Next.js frontends
@@ -131,7 +131,7 @@ export default function AboutMe() {
               </div>
 
               <Image
-                className="scale-100 lg:hidden flex"
+                className="scale-110 lg:hidden flex"
                 height={1000}
                 width={800}
                 alt=""
@@ -139,10 +139,10 @@ export default function AboutMe() {
               />
 
               <div className="max-w-[500px] w-full lg:w-[50%] h-fit ml-auto lg:mt-15 ">
-                <div className="text-[20px] lg:text-[40px] syncopate-regular text-gray-300 border-b-2 w-[70%] lg:w-[80%] ml-auto text-right border-red-800 my-2">
+                <div className="text-[35px] lg:text-[40px] syncopate-regular text-gray-300 border-b-2 w-[80%] lg:w-[80%] ml-auto text-right border-red-800 my-2">
                   {"MY HOBBIES"}
                 </div>
-                <div className="max-w-[700px] w-[60%] h-fit ml-auto mt-5">
+                <div className="max-w-[700px] text-[12px] w-[80%] h-fit ml-auto lg:mt-5 mt-0">
                   {"Beyond coding, I spend time on my creative side — "}
                   <div className="font-bold text-red-300/60">- Gaming</div>
                   <div className="font-bold text-red-300/60">- Sketching</div>
@@ -150,7 +150,7 @@ export default function AboutMe() {
                     - Graphic designing
                   </div>
                   <div className="font-bold text-red-300/60">- Photoshop</div>
-                  {" — I design my own interfaces "}
+                  -{" I design my own interfaces "}
                   {" and care about making apps that feel "}
                   <span className="font-bold text-red-300/60">smooth</span>
                   {" and "}
