@@ -20,7 +20,7 @@ export default function Header() {
         </div>
         <div className="hidden md:flex self-center play-regular flex-row gap-5 lg:gap-8 mr-5 mt-2">
           <button
-            className=" flex flex-col select-none cursor-pointer hover:drop-shadow-[0_0_10px_rgb(220_0_0_/.4)] group text-left"
+            className=" flex flex-col select-none cursor-pointer hover:drop-shadow-[0_0_10px_rgb(220_0_0_/.6)] group text-left"
             onClick={() => router.push("/MyProjects")}
           >
             <div className="bg-linear-to-r group-hover:from-red-800 group-hover:to-red-800 group-hover:via-red-500 from-trasnparent to-trasnparent via-red-500/80 w-23 lg:w-28 h-[1px] duration-300 transition"></div>
@@ -38,9 +38,10 @@ export default function Header() {
               {"See all of my projects i have done"}
             </div>
           </button>
-          <button 
-           onClick={() => router.push("/AboutMe")}
-          className=" flex flex-col hover:drop-shadow-[0_0_10px_rgb(220_0_0_/.4)] group cursor-pointer text-left">
+          <button
+            onClick={() => router.push("/AboutMe")}
+            className=" flex flex-col hover:drop-shadow-[0_0_10px_rgb(220_0_0_/.6)] group cursor-pointer text-left"
+          >
             <div className="bg-linear-to-r group-hover:from-red-800 group-hover:to-red-800 group-hover:via-red-500 from-trasnparent to-trasnparent via-red-500/80 w-23 lg:w-28 h-[1px] duration-300 transition"></div>
 
             <div className=" flex flex-row items-center text-[12px] pl-1 text-gray-300">
@@ -57,7 +58,14 @@ export default function Header() {
               {"Learn about what i do"}
             </div>
           </button>
-          <button className=" flex flex-col hover:drop-shadow-[0_0_10px_rgb(220_0_0_/.4)] group text-left cursor-pointer">
+          <button
+            onClick={() => {
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className=" flex flex-col hover:drop-shadow-[0_0_10px_rgb(220_0_0_/.6)] group text-left cursor-pointer"
+          >
             <div className="bg-linear-to-r drop-shadow-[0_0_20px_rgb(220_0_0_/1)] group-hover:from-red-800 group-hover:to-red-800 group-hover:via-red-500 from-trasnparent to-trasnparent via-red-500/80 w-23 lg:w-28 h-[1px] duration-300 transition"></div>
 
             <div className=" flex flex-row items-center cursor-pointer text-[12px] pl-1 text-gray-300">

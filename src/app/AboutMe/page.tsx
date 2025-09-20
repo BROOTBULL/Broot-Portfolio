@@ -6,7 +6,7 @@ export default function AboutMe() {
     <div className="h-[130vh] w-full relative pb-20 lg:mb-40">
       <div className="flex flex-col text-xs h-full w-full px-5">
         <div className="flex flex-col">
-          <div className="text-[40px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-full lg:w-[50%] border-red-800 my-2">
+          <div className="text-[40px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-full border-red-800 my-5 text-center">
             {"ABOUT ME"}
           </div>
           <div className="h-fit w-full lg:p-2">

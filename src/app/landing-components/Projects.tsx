@@ -13,9 +13,9 @@ const ProjectData = [
     labelColor: "bg-gray-600/30",
     dropShadow: "drop-shadow-gray-400/10",
     buttonColor:
-      "bg-[rgb(10_10_12_/.5)] drop-shadow-[0_0_15px_rgb(190_190_250_/0.1)] border-white/30",
+      "bg-[rgb(10_10_12_/.5)] drop-shadow-[0_0_15px_rgb(190_190_250_/0.1)] group-hover:drop-shadow-[0_0_15px_rgb(190_190_250_/0.5)] border-white/30",
     border: "border-gray-400",
-    link: "https://broot-chess-frontend-fj9b.onrender.com/",
+    link: "https://chess.arjbroot.com/",
   },
   {
     projectName: "Broot-Todo",
@@ -27,9 +27,9 @@ const ProjectData = [
     labelColor: "bg-indigo-800/20",
     dropShadow: "drop-shadow-gray-800/30",
     buttonColor:
-      "bg-slate-950 drop-shadow-[0_0_15px_rgb(20_20_250_/0.2)] border-indigo-950",
+      "bg-slate-950 drop-shadow-[0_0_15px_rgb(20_20_250_/0.2)] group-hover:drop-shadow-[0_0_15px_rgb(20_20_250_/0.5)] border-indigo-950",
     border: "border-indigo-800/80",
-    link: "https://broot-todo.vercel.app/",
+    link: "https://todo.arjbroot.app/",
   },
   {
     projectName: "Broot-Portfolio",
@@ -41,9 +41,9 @@ const ProjectData = [
     labelColor: "bg-red-600/10",
     dropShadow: "drop-shadow-red-800/10",
     buttonColor:
-      "bg-[rgb(28_8_8)] drop-shadow-[0_0_15px_rgb(250_20_20_/0.2)]  border-red-900/80 ",
+      "bg-[rgb(28_8_8)] drop-shadow-[0_0_15px_rgb(250_20_20_/0.2)] group-hover:drop-shadow-[0_0_15px_rgb(250_20_20_/0.5)]  border-red-900/80 ",
     border: "border-red-800/80",
-    link: "https://broot-portfolio.vercel.app/",
+    link: "https://arjbroot.com/",
   },
 ];
 

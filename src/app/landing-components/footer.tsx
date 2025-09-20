@@ -7,13 +7,29 @@ export default function Footer() {
   return (
     <div className="h-fit w-full bg-linear-to-b from-red-800/80 to-red-900/80 p-3">
       <div className="flex flex-col-reverse lg:flex-row h-fit w-full border-1 border-white/30 pt-4">
-        <div className="league-font flex items-end text-[100px] mt-auto h-50 lg:text-[200px] bg-gradient-to-b from-white/70 lg:h-fit to-red-500 bg-clip-text text-transparent pl-5 lg:p-5">
+        <div className="league-font flex items-end text-[100px] mt-auto h-50 lg:text-[200px] bg-gradient-to-b from-white/90 lg:h-fit to-white/40 bg-clip-text text-transparent pl-5 lg:p-5">
           {"I'm Arjit"}
         </div>
 
-        <div className="flex-grow w-full lg:w-[60%] ml-auto lg:p-15">
+        <div className="flex-grow w-full lg:w-[60%] ml-auto lg:p-10">
           <div className=" h-full w-full px-5 flex flex-col">
             <div className=" play-regular justify-end flex flex-col gap-3 max-w-[1000px] mt-2 text-sm w-full mb-5">
+              <button
+                onClick={() => router.push("/")}
+                className=" flex flex-row w-full items-center h-8 text-left border-b-1 border-white/50 hover:bg-black/60 duration-200 cursor-pointer rounded-t-sm pl-1"
+              >
+                Home
+                <div className="text-[10px] lg:text-[11px] px-1 ml-auto text-white/60">
+                  {"Go back to home page of portfolio"}
+                </div>
+                <Image
+                  height={25}
+                  width={25}
+                  alt=""
+                  src={"/media/redirect.png"}
+                  className="size-5 "
+                />
+              </button>
               <button
                 onClick={() => router.push("/MyProjects")}
                 className=" flex flex-row w-full items-center h-8 text-left border-b-1 border-white/50 hover:bg-black/60 duration-200 cursor-pointer rounded-t-sm pl-1"
@@ -47,7 +63,9 @@ export default function Footer() {
                 />
               </button>
               <button
-                onClick={() => router.push("/ContactMe")}
+                onClick={() => {
+                  router.push("/ContactMe");
+                }}
                 className=" flex flex-row w-full items-center h-8 text-left border-b-1 border-white/50 hover:bg-black/60 duration-200 cursor-pointer rounded-t-sm pl-1"
               >
                 Contect me
@@ -63,7 +81,7 @@ export default function Footer() {
                 />
               </button>
             </div>
-            <div className=" lg:mt-auto mt-5 play-regular justify-end flex flex-row gap-5 text-sm">
+            <div className=" lg:mt-auto mt-10 play-regular justify-end flex flex-row gap-5 text-sm">
               <button
                 onClick={() =>
                   window.open(
@@ -94,7 +112,9 @@ export default function Footer() {
                 />
               </button>
               <button
-                onClick={() => window.open(`https://github.com/BROOTBULL/`, "_blank")}
+                onClick={() =>
+                  window.open(`https://github.com/BROOTBULL/`, "_blank")
+                }
                 className=" flex flex-row items-center bg-white/10 p-2 rounded-md hover:bg-black/60 duration-200 cursor-pointer shadow-lg hover:shadow-lg/40 text-white"
               >
                 <Image

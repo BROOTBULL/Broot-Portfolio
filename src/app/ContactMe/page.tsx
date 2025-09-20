@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
+import Footer from "../landing-components/footer";
 
 export default function ContactMe() {
   const [name, setName] = useState("");
@@ -8,10 +9,10 @@ export default function ContactMe() {
   const [message, setMessage] = useState("");
 
   return (
-    <div id="contact" className="h-fit w-full relative pb-20">
-      <div className="flex flex-col text-xs h-full w-full px-5 ">
+    <div id="contact" className="h-fit w-full relative ">
+      <div className="flex flex-col text-xs h-full w-full px-5 mb-10">
         <div className="flex flex-col lg:mb-10">
-          <div className="text-[40px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-full lg:w-[50%] border-red-800 my-2">
+          <div className="text-[40px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-full border-red-800 my-5 text-center">
             {"CONTACT ME"}
           </div>
         </div>
@@ -105,6 +106,7 @@ export default function ContactMe() {
           </form>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
