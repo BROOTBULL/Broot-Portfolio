@@ -17,7 +17,9 @@ export default function Buttons() {
         </div>
         <div className="h-[1px] w-[90%] rounded-[100%] group-hover:h-[2px] duration-200 transition bg-linear-to-r from-transparent group-hover:from-red-800/80 group-hover:to-red-800/80 group-hover:via-white via-red-300 to-transparent drop-shadow-[0_0_5px_rgb(250_250_250_/.6)]"></div>
       </button>
-      <button className="h-fit flex group flex-col items-center rounded-md">
+      <a download={"ArjitGupta_Resume.pdf"} href="/ArjitGupta_Resume.pdf"
+      rel="noopener noreferrer" className="h-fit flex group flex-col items-center rounded-md">
+        <button>
         <div className="h-fit cursor-pointer md:text-lg text-sm border-1 group-hover:bg-gray-500/20 duration-200 border-gray-500 rounded-sm w-25 lg:w-32 py-2 flex flex-row justify-center items-center">
           <div className="pl-2">{"Resume"}</div>
           <Image
@@ -30,6 +32,7 @@ export default function Buttons() {
         </div>
         <div className="h-[1px] w-[90%] bg-linear-to-r * group-hover:from-gray-800/50 group-hover:to-gray-800/50 duration-200 transition group-hover:h-[2px] rounded-[100%] from-black via-white to-black drop-shadow-[0_0_5px_rgb(250_250_250_/.6)]"></div>
       </button>
+      </a>
     </div>
   );
 }
