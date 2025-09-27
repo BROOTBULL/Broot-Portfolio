@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a; 
-  --foreground: #ffffff; 
-}  ::-webkit-scrollbar {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+}
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -12,7 +13,6 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .oleo-script-regular {
   font-family: "Oleo Script", system-ui;
@@ -31,7 +31,7 @@ body {
 }
 .play-regular {
   font-family: "Play", sans-serif;
-  font-weight:200;
+  font-weight: 200;
   font-style: normal;
 }
 .syncopate-regular {
@@ -39,8 +39,6 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
-
 
 @layer utilities {
   .mask {
@@ -77,4 +75,75 @@ body {
 
 .animate-scroll-reverse {
   animation: scroll 50s linear infinite;
+}
+
+@keyframes diagonalAnimation {
+  0% {
+    transform: translate(-100px, 70px) rotateX(46deg) rotateZ(45deg);
+    opacity: 0;
+  }
+  40% {
+    transform: translate(0px, 0px) rotateX(46deg) rotateZ(45deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0px, 0px) rotateX(46deg) rotateZ(45deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(0px, 0px) rotateX(46deg) rotateZ(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100px, 70px) rotateX(46deg) rotateZ(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fallingAnimation {
+  0% {
+    transform: translate(0px, -50px) rotateX(46deg) rotateZ(45deg);
+    opacity: 0;
+  }
+  40% {
+    transform: translate(0px, 0px) rotateX(46deg) rotateZ(45deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0px, 0px) rotateX(46deg) rotateZ(45deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(0px, 0px) rotateX(46deg) rotateZ(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 50px) rotateX(46deg) rotateZ(45deg);
+    opacity: 0;
+  }
+}
+
+.loadingTile
+{
+  animation:diagonalAnimation 4s ease-in-out infinite ;
+  animation-fill-mode: both;
+  animation-delay: 0.4s;
+}
+.loadingTile2
+{
+  animation:diagonalAnimation 4s ease-in-out infinite ;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+.loadingFallingTile
+{
+  animation:fallingAnimation 4s ease-in-out infinite ;
+  animation-fill-mode: both;
+  animation-delay: 0.4s;
+}
+.loadingFallingTile2
+{
+  animation:fallingAnimation 4s ease-in-out infinite ;
+  animation-fill-mode: both;
 }

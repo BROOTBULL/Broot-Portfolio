@@ -43,6 +43,7 @@ export default function AboutMe() {
                     width={800}
                     alt=""
                     src={"/media/gallery/profile.png"}
+                    priority
                   />
                 </div>
               </div>

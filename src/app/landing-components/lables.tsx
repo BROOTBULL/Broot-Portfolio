@@ -1,4 +1,10 @@
+"use client";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 export default function Labels() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   const items = [
     "✦ FULL STACK DEV",
     "✦ NEXT.JS",
@@ -16,8 +22,21 @@ export default function Labels() {
     "✦ TYPESCRIPT",
   ];
 
+  useEffect(() => {
+    if (containerRef.current) {
+      gsap.fromTo(
+        containerRef.current,
+        { y: 80, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.5, delay:5.5, ease: "circ.out" }
+      );
+    }
+  }, []);
+
   return (
-    <div className="h-40 lg:h-70  w-screen flex justify-center items-center relative overflow-hidden -top-10">
+    <div
+      ref={containerRef}
+      className="h-40 lg:h-70 w-screen flex justify-center items-center relative overflow-hidden -top-10"
+    >
       {/* Top Scrolling Bar */}
       <div className="absolute rotate-5 z-20 h-10 lg:h-15 drop-shadow-xl/50 w-[200vw] bg-gradient-to-b from-red-800 to-red-900 brightness-90 overflow-hidden flex items-center">
         <div className="animate-scroll flex whitespace-nowrap font-bold text-sm text-white text-shadow-xs/90 justify-between flex-row h-7 lg:h-11 items-center border-y-1 border-gray-200">

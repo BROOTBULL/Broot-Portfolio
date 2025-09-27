@@ -1,11 +1,81 @@
+"use client"
+
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function MySkills() {
+    const headingRef = useRef<HTMLDivElement>(null);
+    const borderRef = useRef<HTMLDivElement>(null);
+  
+   useEffect(() => {
+      if (headingRef.current && borderRef.current) {
+        const letters = headingRef.current.querySelectorAll(".heading-char");
+  
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: headingRef.current,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        });
+  
+        // animate letters
+        tl.fromTo(
+          letters,
+          { y: 50, opacity: 0, filter: "blur(5px)" },
+          {
+            y: 0,
+            opacity: 1,
+            filter: "blur(0px)",
+            stagger: 0.08,
+            ease: "back.out(1.7)",
+            duration: 0.6,
+          }
+        );
+  
+        // animate border underline
+        tl.fromTo(
+          borderRef.current,
+          { width: "0%" },
+          { width: "100%", duration: 0.8, ease: "power2.out" },
+          "-=0.3" // overlap a bit with last letters
+        );
+      }
+    }, []);
+  
+    const text = "MY SKILLS";
+  
   return (
     <div className="h-fit w-full relative pb-20">
       <div className="flex flex-col text-xs h-full w-full px-5">
         <div className="flex flex-col">
-          <div className="text-[40px] lg:text-[80px] syncopate-regular text-gray-300 border-b-2 w-full lg:w-[50%] border-red-800 my-2">
-            {"MY SKILLS"}
+        <div className="flex flex-col">
+          {/* Animated Heading */}
+          <div className="relative w-full lg:w-[50%] my-2">
+            <div
+              ref={headingRef}
+              className="text-[40px] lg:text-[80px] syncopate-regular text-gray-300 flex flex-wrap overflow-hidden"
+            >
+              {text.split("").map((char, i) => (
+                <span
+                  key={i}
+                  className="heading-char inline-block overflow-hidden"
+                >
+                  {char === " " ? "\u00A0" : char}
+                </span>
+              ))}
+            </div>
+            {/* Border that animates */}
+            <div
+              ref={borderRef}
+              className="h-[2px] bg-red-800 absolute left-0 bottom-0"
+              style={{ width: "0%" }}
+            />
           </div>
+        </div>
           <div className="lg:p-8 text-[12px] lg:text-sm play-regular text-gray-400 w-full flex flex-col gap-5">
             <div className="max-w-[730px] h-fit ml-auto">
               {"I enjoy "}

@@ -32,6 +32,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="preload" href="/ArjitGupta_Resume.pdf" as="fetch" type="application/pdf"/>
+        <link rel="preload" as="image" href="/media/BrootW.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Anton&family=League+Gothic&family=Oleo+Script:wght@400;700&family=Oswald:wght@200..700&family=Play:wght@400;700&family=Rubik+Mono+One&&family=Syncopate:wght@400;700&display=swap"
           rel="stylesheet"
